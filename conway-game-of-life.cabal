@@ -1,0 +1,32 @@
+name:           conway-game-of-life
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/conway-game-of-life#readme>
+homepage:       https://github.com/trandi/conway-game-of-life#readme
+bug-reports:    https://github.com/trandi/conway-game-of-life/issues
+author:         Dan Oprescu
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/trandi/conway-game-of-life
+
+executable conway-game-of-life-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.5 && <5
+    , random
+    , bytestring
+    , HPi
+    , split
+  other-modules:
+      Paths_conway_game_of_life
+  default-language: Haskell2010
+
